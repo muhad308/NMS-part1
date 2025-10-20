@@ -1,0 +1,129 @@
+======================================================================
+                       TechCorp AB
+======================================================================
+Report generate time : 2025-10-20 16:47:04
+report last updated time :  2024-09-30T10:30:00
+
+                     Exective summary
+======================================================================
+
+⚠️  critical :2
+⚠️  warning  :3
+⚠️  9 devices with low uptime (<30 days) - may indicate instability
+⚠️  2 switches have high port utilization (>80%)
+
+
+         Devices with problem 
+------------------------------
+
+status : OFFLINE 
+SW-ACCESS-03   192.168.1.5  Huvudkontor
+AP-LAGER-02   192.168.200.102  Lager
+
+status : WARNING 
+AP-FLOOR2-02   192.168.20.102  Huvudkontor
+RT-LAGER-01   192.168.2.254  Lager
+SW-DC-TOR-02   10.0.1.2  Datacenter
+
+
+  DEVICES WITH LOW UPTIME (<30 days) 
+ -------------------------------------
+SW-ACCESS-03     0days  ⚠️ critical
+SW-ACCESS-05     15days  Huvudkontor
+AP-FLOOR2-01     12days  Huvudkontor
+AP-FLOOR2-02     2days  ⚠️ critical
+SW-LAGER-02     23days  Lager
+RT-LAGER-01     2days  ⚠️ critical
+AP-LAGER-02     0days  ⚠️ critical
+SW-MAL-ACC-02     8days  Kontor Malmö
+SW-DC-TOR-02     5days  Datacenter
+
+ STATISTICS BY DEVICE TYPE 
+ -------------------------------------
+ Switch          18st     (1 offline)
+ Routers         6 st     (0 offline)
+ access_points   9 st     (1 offline)
+ firewalls       5 st     (0 offline)
+ load_balancer   2 st     (0 offline)
+ -------------------------------------
+ TOTAL:      40 units  (2 offline = 5.0% offline)
+
+ PORT USE SWITCHES 
+------------------------------------------------------------
+SITE           SWITCHES       USED/TOTAL          USAGE IN PERCENT
+------------------------------------------------------------
+Huvudkontor    7st               162/216       75.00%
+Lager          2st               57/96        59.38%
+Kontor Malmö   3st               79/96        82.29%⚠️ 
+Datacenter     5st               231/240       96.25%⚠️ critical
+Säkerhetskopia 1st               12/28        42.86%
+------------------------------------------------------------
+ Totalt:      541/676 ports used             (80.0%)
+
+ SWITCHES WITH HIGH PORT UTILIZATION (>80%)
+------------------------------------------------------------
+
+FW-MAL-01          79/96    82.3% ⚠️ 
+
+LB-DC-02          231/240    96.2% ⚠️ 
+
+
+ OVER VIEW 
+------------------------------------------------------------
+
+Total number of unique VLANs in the network: 19
+ VLANs: 10,20,30,40,50,100,110,120,200,300,400,500,600,700,800,900,1000,2000,2100
+
+ STATICS PER SITE 
+------------------------------------------------------------
+Huvudkontor(Stockholm): 
+   Units :15(13 online, 1 offline, 1 warning)
+   contact :Anna Andersson
+
+Lager(Göteborg): 
+   Units :7(3 online, 2 offline, 2 warning)
+   contact :Björn Björnsson
+
+Kontor Malmö(Malmö): 
+   Units :11(7 online, 2 offline, 2 warning)
+   contact :Cecilia Carlsson
+
+Datacenter(Stockholm): 
+   Units :14(9 online, 2 offline, 3 warning)
+   contact :David Davidsson
+
+Säkerhetskopia(Umeå): 
+   Units :8(3 online, 2 offline, 3 warning)
+   contact :Erik Eriksson
+
+
+
+ ACCESS POINT -- CLIENTS OVERVIEW 
+------------------------------------------------------------
+Maximum load:    
+AP-FLOOR1-01        18  clients 
+
+AP-FLOOR1-02        25  clients 
+
+AP-FLOOR2-01        23  clients 
+
+AP-FLOOR2-02        45  clients ⚠️  Overloaded
+
+AP-FLOOR3-01        31  clients 
+AP-LAGER-01         8   clients 
+
+AP-LAGER-02         0   clients 
+AP-MAL-01           28  clients 
+
+AP-MAL-02           19  clients 
+REKOMMENDATIONER 
+----------------
+URGENT: Investigate offline devices immediately (2)
+CRITICAL: Data center has extremely high port utilization - plan expansion 
+Check devices with low uptime särskilt de med <5 dagar 
+AP-FLOOR2-02 has 45 connected clients (warning) - consider load balancing
+Consider standardizing vendors per site for easier maintenance
+
+======================================================================
+                       REPORT END 
+======================================================================
